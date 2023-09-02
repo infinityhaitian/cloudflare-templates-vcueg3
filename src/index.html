@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.10.2/video-js.min.css"
+			rel="stylesheet"
+		/>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.10.2/video.min.js"></script>
+	</head>
+	<body>
+		<video-js id="vid1" controls preload="auto">
+			<!-- Replace the src URL with the HLS manifest URL for a given video
+    You can access this from the Cloudflare Stream dashboard or via the Stream API -->
+			<source
+				src="https://player.restream.io/?token=2c8a9196085b4e1c9c25450451f55bd8&vwrs=1"
+			/>
+		</video-js>
+
+		<script>
+			const vid = document.getElementById('vid1');
+			const player = videojs(vid);
+		</script>
+	</body>
+</html>
